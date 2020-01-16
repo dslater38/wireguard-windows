@@ -267,7 +267,7 @@ var enIndex = []uint32{ // 176 elements
 	0x00001271, 0x000012d0, 0x00001325, 0x0000133e,
 	0x00001349, 0x0000136d, 0x0000138d, 0x0000139f,
 	0x000013d8, 0x000013f9, 0x00001419, 0x0000143b,
-} // Size: 728 bytes
+} // Size: 716 bytes
 
 const enData string = "" + // Size: 5179 bytes
 	"\x02Error\x02(no argument): elevate and install manager service\x02Usage" +
@@ -406,7 +406,7 @@ var slIndex = []uint32{ // 176 elements
 	0x00001586, 0x000015f3, 0x00001646, 0x00001662,
 	0x00001670, 0x00001697, 0x000016b9, 0x000016cb,
 	0x00001713, 0x00001737, 0x0000175b, 0x00001780,
-} // Size: 728 bytes
+} // Size: 716 bytes
 
 const slData string = "" + // Size: 6016 bytes
 	"\x02Napaka\x02(brez argumenta): povzdigni na skrbniške pravice in namest" +
@@ -507,4 +507,4 @@ const slData string = "" + // Size: 6016 bytes
 	"kvirja\x02http2: Framer %[1]p: zapisano %[2]v\x02http2: Framer %[1]p: pr" +
 	"ebrano %[2]v\x02http2: dekodirano polje hpack %+[1]v"
 
-	// Total table size 12651 bytes (12KiB); checksum: 7F514737
+	// Total table size 12627 bytes (12KiB); checksum: 7F514737

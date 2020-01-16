@@ -29,12 +29,22 @@ Since WireGuard requires the Wintun driver to be installed, and this generally r
 To translate WireGuard UI to your language:
 
 1. Upgrade `resources.rc` accordingly. Follow the pattern.
-2. Add your language ID to the `//go:generate go run golang.org/x/text/cmd/gotext ... -lang=en,<your language ID>...` line in `main.go`.
-3. Run `go generate`. Requires local Go installation.
-4. `copy locales\<your language ID>\out.gotext.json locales\<your language ID>\messages.gotext.json`
-5. Translate `messages.gotext.json`. See other language message files how to translate messages and how to tackle plural.
-6. Run `go generate`, `build`, and test.
-7. Repeat from 5.
+
+2. Add your language ID to the `//go:generate go run golang.org/x/text/cmd/gotext ... -lang=en,<langID>...` line in `main.go`.
+
+3. Configure and run `build` to prepare initial `locales\<langID>\messages.gotext.json` file:
+
+   ```
+   C:\Projects\wireguard-windows> set GenerateLocalizations=yes
+   C:\Projects\wireguard-windows> build
+   C:\Projects\wireguard-windows> copy locales\<langID>\out.gotext.json locales\<langID>\messages.gotext.json
+   ```
+
+4. Translate `locales\<langID>\messages.gotext.json`. See other language message files how to translate messages and how to tackle plural.
+
+5. Run `build` from the step 3 again, and test.
+
+6. Repeat from step 4.
 
 ### Optional: Creating the Installer
 
